@@ -7,7 +7,7 @@ Kaptioner is a Machine Learning based Web App that allows the user to quickly ge
 * BootStrap
 
 ## Repository Link for Computer Vision Model
-https://github.com/ishankjain/hackBPIT -automatic
+https://github.com/ishankjain/hackBPIT
 ## Functionalities
 * Authentication System - Users can create a New Account, Log In to their pre-existing account using this functionality.
 * User Photo Upload - Through this the user can either upload an Image from his machine or even provide us an Image URL.
