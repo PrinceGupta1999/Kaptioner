@@ -45,7 +45,7 @@ app.use(function(req, res, next){
 app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
-
+app.use('/uploads/', express.static('uploads'));
 
 app.listen(8080, process.env.IP, function(){
    console.log("The Captionator Server Has Started!");

@@ -2,8 +2,16 @@ var express = require("express");
 var router  = express.Router();
 var Campground = require("../models/campgrounds");
 var middleware = require("../middleware");
-
-
+var multer = require("multer");
+var storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+    cb(null, './uploads/');
+  },
+  filename: function(req, file, cb) {
+    cb(null, new Date().toISOString() + file.originalname)
+  }
+});
+var upload = multer({storage: storage});
 //INDEX - show all campgrounds
 router.get("/", function(req, res){
     // Get all campgrounds from DB
@@ -17,27 +25,41 @@ router.get("/", function(req, res){
 });
 
 //CREATE - add new campground to DB
-router.post("/", middleware.isLoggedIn, function(req, res){
+router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, res)
+{
+    // req.file;
     // get data from form and add to campgrounds array
-    var name = req.body.name;
-    var price = req.body.price;
-    var image = req.body.image;
+    var image = req.file.path;
     var desc = req.body.description;
     var author = {
         id: req.user._id,
         username: req.user.username
     }
-    var newCampground = {name: name,price:price, image: image, description: desc, author:author}
-    // Create a new campground and save to DB
-    Campground.create(newCampground, function(err, newlyCreated){
-        if(err){
-            console.log(err);
-        } else {
-            //redirect back to campgrounds page
-            console.log(newlyCreated);
-            res.redirect("/campgrounds");
-        }
-    });
+    var spawn = require("child_process").spawn; 
+    // Parameters passed in spawn - 
+    // 1. type_of_script 
+    // 2. list containing Path of the script 
+    // and arguments for the script 
+    // E.g : http://localhost:3000/name?firstname=Mike&lastname=Will 
+    // so, first name = Mike and last name = Will 
+    var process = spawn('python',["./sample_test.py", image]); 
+    // Takes stdout data from script which executed 
+    // with arguments and send this data to res object 
+    process.stdout.on('data', function(data) {
+      var caption = data.toString(); 
+      var newCampground = {image: image, author: author, description: desc, caption: caption};
+      // Create a new campground and save to DB
+      Campground.create(newCampground, function(err, newlyCreated){
+          if(err){
+              console.log(err);
+          } else {
+              //redirect back to campgrounds page
+              console.log(newlyCreated);
+              res.redirect("/campgrounds");
+          }
+      });
+    }); 
+    
 });
 
 //NEW - show form to create new campground
