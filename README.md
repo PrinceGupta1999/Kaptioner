@@ -11,7 +11,7 @@ https://github.com/ishankjain/hackBPIT
 ## Functionalities
 * Authentication System - Users can create a New Account, Log In to their pre-existing account using this functionality.
 * User Photo Upload - Through this the user can either upload an Image from his machine or even provide us an Image URL.
-* Add Description
+* Add Description - Users can add a suitable description related to their Image.
 * User Interaction - Users interact with each other by Commenting on 
  various other pics. this also helps us to generate a Real Time Dynamic set of TRENDING PHOTOS AND TAGS.
  
