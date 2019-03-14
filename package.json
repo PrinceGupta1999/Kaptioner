@@ -1,0 +1,27 @@
+{
+  "name": "Kaptioner",
+  "version": "1.0.0",
+  "description": "Kaptioner is a Machine Learning based Web App that allows the user to quickly generate precise and accurate Tags i.e \"IDENTIFICATION LABELS\" based upon the uploaded image and the description.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrinceGupta1999/Kaptioner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrinceGupta1999/Kaptioner/issues"
+  },
+  "homepage": "https://github.com/PrinceGupta1999/Kaptioner#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19",
+    "multer": "^1.4.1"
+  }
+}

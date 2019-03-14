@@ -1,0 +1,20 @@
+body 
+{
+	background: #C6FFDD;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+form legend {
+	width:inherit; /* Or auto */
+	padding:0 10px; /* To give a bit of padding on the left and right */
+	background: #f4426e;
+	color: #fff;
+	border-radius: 0.5rem; 
+}
+form fieldset {
+	border: 1px groove #ddd !important;
+	padding: 0 1.4em 1.4em 1.4em !important;
+	margin: 0 0 1.5em 0 !important;
+	-webkit-box-shadow:  0px 0px 0px 0px #000;
+			box-shadow:  0px 0px 0px 0px #000;
+}
