@@ -1,5 +1,23 @@
 $("form").on('submit', function (e) {
 	e.preventDefault();
+	var data = new FormData($("form")[0]);
+	console.log(data);
+	$.ajax({
+		url: '/',
+		data: data,
+		cache: false,
+		contentType: false,
+		processData: false,
+		method: 'POST',
+	    type: 'POST', // For jQuery < 1.9
+	    success: function(data) {
+	    	data = JSON.parse(data);
+	    	console.log(data);
+	    	$("#description-holder").find('span').html(data.desc);
+	    	$("#caption-holder").find('span').html(data.caption);
+	    	$("form")[0].reset();
+	    }
+	});
 });
 function someImage() {
 	var image_holder = $("#image-holder");
