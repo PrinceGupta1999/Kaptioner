@@ -27,6 +27,7 @@ function someImage() {
 	image_holder.removeClass('border');
 	image_holder.css({'min-height': '0rem'});
 	image_holder.empty();
+	$('div.custom-file').find('label').html(filename);
 }
 function noImage() {
 	var image_holder = $("#image-holder");
@@ -36,6 +37,7 @@ function noImage() {
 	image_holder.empty();
 	image_holder.html('<span class="d-inline-block mt-5 text-muted">Uploaded Image will be displayed here..</span>');
 	image_holder.css({'min-height': '15rem'});
+	$('div.custom-file').find('label').html('Choose File...');
 }
 noImage();
 $("#file").on('change', function() {
@@ -60,7 +62,6 @@ $("#file").on('change', function() {
 	if (extn == "png" || extn == "jpg" || extn == "jpeg") 
 	{
 		var filename = $('input[type=file]').val().split('\\').pop();
-		$('div.custom-file').find('label').html(filename);
 		if (typeof(FileReader) != "undefined") {
 			someImage();
 		//loop for each file selected for uploaded.
