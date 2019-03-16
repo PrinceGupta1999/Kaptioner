@@ -32,7 +32,7 @@ cd Kaptioner
 ```
 * Install Dependencies
 ```bash
- npm install
+npm install
 ```
 * Initiate the NodeJs server
 ```bash
