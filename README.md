@@ -22,18 +22,23 @@ Kaptioner is a Machine Learning based Web App that allows the user to quickly ge
 
 ### Cloning Repository and Installation
 * Open Command Prompt in the Directory You Want to Install.
-* Run the following commmand to clone this Repository
+* Clone the Repository
 ```bash
 git clone https://github.com/PrinceGupta1999/Kaptioner.git
 ```
-* Run the following commmand to install dependencies
+* Change working Directory to the Repository
+```bash
+cd Kaptioner
+```
+* Install Dependencies
 ```bash
  npm install
 ```
-* Initiate the NodeJs server by running the following command
+* Initiate the NodeJs server
 ```bash
 node index.js
 ```
+* Access the [Application](http://localhost:3000)
 
 ## Utitlities
 The Application will make use of Computer Vision based standard architectures including Convolutional Neural Networks and a dynamic set of IDENTIFICATION LABELS to learn in  real time from the inputs provided by the user.
