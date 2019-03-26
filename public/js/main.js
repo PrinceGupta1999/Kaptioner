@@ -20,6 +20,7 @@ $("form").on('submit', function (e) {
 	});
 });
 function someImage() {
+	var filename = $('input[type=file]').val().split('\\').pop();
 	var image_holder = $("#image-holder");
 	image_holder.removeClass('mt-md-5');
 	image_holder.addClass('mt-md-2');
@@ -28,6 +29,7 @@ function someImage() {
 	image_holder.css({'min-height': '0rem'});
 	image_holder.empty();
 	$('div.custom-file').find('label').html(filename);
+	$("#caption-holder").find('span').html('');
 }
 function noImage() {
 	var image_holder = $("#image-holder");
@@ -38,6 +40,7 @@ function noImage() {
 	image_holder.html('<span class="d-inline-block mt-5 text-muted">Uploaded Image will be displayed here..</span>');
 	image_holder.css({'min-height': '15rem'});
 	$('div.custom-file').find('label').html('Choose File...');
+	$("#caption-holder").find('span').html('');
 }
 noImage();
 $("#file").on('change', function() {
