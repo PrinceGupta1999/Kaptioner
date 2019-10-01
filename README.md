@@ -22,15 +22,19 @@ Kaptioner is a Machine Learning based Web App that allows the user to quickly ge
 
 #### Cloning Repository and Installation
 * Open Command Prompt in the Directory You Want to Install.
-* Run the following commmand to clone this Repository
+* Clone the Repository
 ```bash
 git clone https://github.com/PrinceGupta1999/Kaptioner.git
 ```
-* Run the following commmand to install dependencies
+* Change working Directory to the Repository
 ```bash
- npm install
+cd Kaptioner
 ```
-* Initiate the NodeJs server by running the following command
+* Install Dependencies
+```bash
+npm install
+```
+* Initiate the NodeJs server
 ```bash
 node index.js
 ```
