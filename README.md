@@ -1,5 +1,5 @@
 # Kaptioner
-Kaptioner is a Machine Learning based Web App that allows the user to quickly generate precise and accurate Tags i.e "IDENTIFICATION LABELS" based upon the uploaded image and the description. 
+Kaptioner is a Machine Learning based Web App that allows the user to quickly generate precise and accurate Tags i.e "IDENTIFICATION LABELS" based upon the uploaded image and the description.
 
 ## Technology Stack
 * MEN (MongoDB, ExpressJS, NodeJs) Stack
