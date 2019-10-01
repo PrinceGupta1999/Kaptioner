@@ -38,8 +38,6 @@ npm install
 ```bash
 node index.js
 ```
-* Access the [Application](http://localhost:3000)
-
 ### Utitlities
 The Application will make use of Computer Vision based standard architectures including Convolutional Neural Networks and a dynamic set of IDENTIFICATION LABELS to learn in  real time from the inputs provided by the user.
 It would help online shopping and e-commerce giants - Flipkarts and the Snapdeals to generate pinpoint and unambiguous labels for each and every product, use them on a platform like the Google AdWords and then recognize and focus on a specific target audience.
