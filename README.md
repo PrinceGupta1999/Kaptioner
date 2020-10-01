@@ -43,3 +43,6 @@ The Application will make use of Computer Vision based standard architectures in
 It would help online shopping and e-commerce giants - Flipkarts and the Snapdeals to generate pinpoint and unambiguous labels for each and every product, use them on a platform like the Google AdWords and then recognize and focus on a specific target audience.
 
 Also, we intend to implement the algorithm to perform error-free search operations on a group of products based upon these Identification Labels. It would considerably improve the search functionality on these websites with a large collection of data and heavy traffic.
+
+
+
