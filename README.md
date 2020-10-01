@@ -20,6 +20,7 @@ Kaptioner is a Machine Learning based Web App that allows the user to quickly ge
 #### Install NodeJs and NPM
 * Follow instructions from [NodeJs Website](https://nodejs.org/en/download/)
 
+
 #### Cloning Repository and Installation
 * Open Command Prompt in the Directory You Want to Install.
 * Clone the Repository
